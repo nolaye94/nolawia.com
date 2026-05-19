@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+
+        .floating-image {
+            animation: float 3s ease-in-out infinite;
+            display: block;
+            margin: 10px auto;
+            width: 400px;
+            height: 400px;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Floating Profile Picture ✨</h1>
+        <!-- Using a placeholder image URL that always works -->
+        <img 
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
+            alt="Profile Picture" 
+            class="floating-image"
+        >
+    </div>
+</body>
+</html>
