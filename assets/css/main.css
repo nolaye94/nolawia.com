@@ -3074,9 +3074,117 @@ input, select, textarea {
 
 /* apply the animation to any element (e.g. <img>) by giving it this class */
 .floating-image {
-    /* name must match the @keyframes above */
     animation: float 3s ease-in-out infinite;
 }
 
+/* =====================================================
+   Mobile Responsive Overrides
+   ===================================================== */
 
+@media screen and (max-width: 840px) {
+    body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 7.5rem;
+    }
+
+    /* Keep header visible on mobile with a stacked layout */
+    #header {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em 0.75em;
+        gap: 0;
+    }
+
+    #header .inner {
+        order: -1;
+        padding: 0;
+    }
+
+    #header .inner h2 {
+        margin: 0.2em 0;
+        text-align: center;
+    }
+
+    #header .inner h2 a {
+        font-size: 15px !important;
+        padding: 0 !important;
+    }
+
+    #header nav {
+        position: static;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+
+    #header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.1em;
+    }
+
+    #header nav ul li {
+        margin-left: 0;
+    }
+
+    #header nav ul li a {
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 8.5rem;
+    }
+
+    /* Fix large inline side margins on content sections */
+    section {
+        margin-left: 0.5em !important;
+        margin-right: 0.5em !important;
+    }
+
+    /* Fix inline side margins on paragraphs inside sections */
+    p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Make center-box heading cards more compact */
+    .center-box {
+        margin: 1.5em auto !important;
+        padding: 0.75em 1em !important;
+    }
+
+    /* Fix image rows: override inline flex-wrap and negative margins */
+    .row {
+        flex-wrap: wrap !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .row > * {
+        padding: 10px !important;
+    }
+
+    /* Inline-block images (DietScan / Design 231 presentation) */
+    .image.inline-block img {
+        width: 90% !important;
+        max-width: 400px;
+    }
+
+    /* Footer */
+    #footer {
+        padding: 2.5em 1em !important;
+    }
+
+    #footer ul.icons {
+        gap: 1em !important;
+    }
+}
 
